@@ -266,3 +266,7 @@ class TestVideo(MpfMcTestCase):
         self.assertEqual(self.mc.targets['default'].current_slide.name, 'video_test9')
 
         self.assertEqual(video_widget.state, 'stop')
+
+    def test_video_pool(self):
+        self.mc.events.post('show_vp_slide')
+        self.advance_time()
